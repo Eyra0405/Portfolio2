@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInicon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Porfolio de Celia! Desarrrolladora y programadora web"
+	description="Contrata a Celia, una desarrolladora web junior con experiencia en HTML, CSS y JavaScript. 
+	Con un enfoque en el desarrollo frontend, 
+	Celia está lista para llevar tus proyectos al siguiente nivel. ¡Contáctala hoy mismo!">
+	<main>
+		<section class=" w-full  mx-auto lg:w-[740px] py-44">
+			<img 
+    			class="rounded-full w-12 h-12 mb-4" 
+        		src="https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-corazon-como-icono.png" 
+    			alt="ceci photo"
+    			/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, Soy Celia
+				<a 
+				href="https://www.linkedin.com/in/celia-urcola-rosel-16a095171/"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center">
+				<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl opacity-80 text-wrap">
+			<span class="text-yellow-200/90 opacity-80">Soy desarrolladora Junior. </span>
+			<span>Especializandose en FrontEnd</span>
+			<span class="text-red-200/90">De Zaragoza pero perdida en Valencia.</span>
+			</h2>
+
+			<nav class="flex gap-x-2 mt-4">
+				<SocialPill href="https://www.linkedin.com/in/celia-urcola-rosel-16a095171/">
+					<LinkedInicon class="w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/Eyra0405">
+					<GitHubIcon class="w-6 h-6" />
+					GitHub
+				</SocialPill>
+					<SocialPill href="https://github.com/Eyra0405">
+					<MailIcon class="w-6 h-6" />
+					Contactemos
+				</SocialPill>
+			</nav>
+		</section>
+	</main>
 </Layout>
