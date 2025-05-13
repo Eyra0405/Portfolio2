@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE =[
+    {
+        title: "Prácticas Orbe Telecomunicaciones",
+        date: "Marzo 2025 - Junio-2025",
+        description: "Desarrollo de aplicaciones web para el equipo, interfaz Visual Jira, formulario para equipo técnico",
+        link: "https://github.com/Eyra0405?tab=repositories",
+    },
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((Experience) => (
+      <li class="">
+        <ExperienceItem {...Experience} />
+      </li>
+    ))
+  }
+</ol>
+
